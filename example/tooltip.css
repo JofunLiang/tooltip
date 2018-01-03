@@ -1,0 +1,150 @@
+@charset "UTF-8";
+
+/*!
+ * tooltip.css -https://github.com/JofunLiang/tooltip
+ * Version - 1.0.0
+ * Licensed under the MIT license - http://opensource.org/licenses/MIT
+ * Copyright (c) 2018 jofun Liang
+ */
+
+/*utils*/
+[tooltip]:hover{
+	position:relative;
+	cursor:pointer;
+}
+
+[tooltip]:hover:before,
+[tooltip]:hover:after{
+	position:absolute;
+	opacity: 0;
+	opacity: 1\0; /*IE9*/
+	-webkit-animation:tooltip_fedeIn 0.7s linear forwards;
+	-moz-animation:tooltip_fedeIn 0.7s linear forwards;
+	-ms-animation:tooltip_fedeIn 0.7s linear forwards;
+	animation:tooltip_fedeIn 0.7s linear forwards;
+}
+
+@keyframes tooltip_fedeIn{
+	from{opacity: 0;}
+	to{opacity: 1;}
+}
+
+@-webkit-keyframes tooltip_fedeIn{
+	from{opacity: 0;}
+	to{opacity: 1;}
+}
+
+@-moz-keyframes tooltip_fedeIn{
+	from{opacity: 0;}
+	to{opacity: 1;}
+}
+
+@-ms-keyframes tooltip_fedeIn{
+	from{opacity: 0;}
+	to{opacity: 1;}
+}
+
+[tooltip]:hover:before{
+	font-size:.95em;
+	content:attr(tips);
+	background-color:#000;
+	padding:.5em 1em;
+	color:#fff;
+	white-space:pre;
+	border-radius:2px;
+	line-height:150%;
+}
+
+[tooltip]:hover:after{
+	display:block;
+	content:"";
+	width:0;
+	height:0;
+	border-width:8px;
+	border-style:solid;
+	border-color:transparent;
+}
+
+/*left & right*/
+[tooltip=left]:hover:before,
+[tooltip=right]:hover:before,
+[tooltip=left]:hover:after,
+[tooltip=right]:hover:after{
+	top:50%;
+	-webkit-transform: translateY(-50%);
+	-moz-transform: translateY(-50%);
+	-ms-transform: translateY(-50%);
+		 transform: translateY(-50%);
+}
+
+/*top & bottom*/
+[tooltip=top]:hover:before,
+[tooltip=bottom]:hover:before,
+[tooltip=top]:hover:after,
+[tooltip=bottom]:hover:after{
+	left:50%;
+	-webkit-transform: translateX(-50%);
+	-moz-transform: translateX(-50%);
+	-ms-transform: translateX(-50%);
+		 transform: translateX(-50%);
+}
+
+/*right*/
+[tooltip=right]:hover:before,
+[tooltip=right]:hover:after{
+	left:100%;
+}
+
+[tooltip=right]:hover:before{
+	margin-left:8px;
+}
+
+[tooltip=right]:hover:after{
+	border-left-width:0;
+	border-right-color:#000;
+}
+
+/*left*/
+[tooltip=left]:hover:before,
+[tooltip=left]:hover:after{
+	right:100%;
+}
+
+[tooltip=left]:hover:before{
+	margin-right:8px;
+}
+
+[tooltip=left]:hover:after{
+	border-right-width:0;
+	border-left-color:#000;
+}
+
+/*top*/
+[tooltip=top]:hover:before,
+[tooltip=top]:hover:after{
+	bottom:100%;
+}
+
+[tooltip=top]:hover:before{
+	margin-bottom:8px;
+}
+
+[tooltip=top]:hover:after{
+	border-bottom-width:0;
+	border-top-color:#000;
+}
+
+/*bottom*/
+[tooltip=bottom]:hover:before,
+[tooltip=bottom]:hover:after{
+	top:100%;
+}
+
+[tooltip=bottom]:hover:before{
+	margin-top:8px;
+}
+
+[tooltip=bottom]:hover:after{
+	border-top-width:0;
+	border-bottom-color:#000;
+}
