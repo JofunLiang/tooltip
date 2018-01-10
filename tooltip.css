@@ -2,7 +2,7 @@
 
 /*!
  * tooltip.css -https://github.com/JofunLiang/tooltip
- * Version - 1.0.0
+ * Version - 1.0.1
  * Licensed under the MIT license - http://opensource.org/licenses/MIT
  * Copyright (c) 2018 jofun Liang
  */
@@ -18,10 +18,10 @@
 	position:absolute;
 	opacity: 0;
 	opacity: 1\0; /*IE9*/
-	-webkit-animation:tooltip_fedeIn 0.7s linear forwards;
-	-moz-animation:tooltip_fedeIn 0.7s linear forwards;
-	-ms-animation:tooltip_fedeIn 0.7s linear forwards;
-	animation:tooltip_fedeIn 0.7s linear forwards;
+	-webkit-animation:tooltip_fedeIn 0.03s linear forwards;
+	-moz-animation:tooltip_fedeIn 0.03s linear forwards;
+	-ms-animation:tooltip_fedeIn 0.03s linear forwards;
+	animation:tooltip_fedeIn 0.03s linear forwards;
 }
 
 @keyframes tooltip_fedeIn{
