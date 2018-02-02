@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<title>tooltip.css</title>
+		<meta name="description" content="纯css鼠标提示工具。tooltip.css。" />
+		<meta name="keywords" content="tooltip,鼠标提示css,鼠标提示工具,纯css鼠标提示工具,tooltip.css使用示例" />
+		<link rel="stylesheet" href="tooltip.min.css" />
+		<style>
+			body{
+				text-align:center;
+				line-height:150%;
+				font-size:16px;
+				font-family: "微软雅黑";
+				background-color:#FAFAFA;
+			}
+			
+			.demo{
+				max-width:100px;
+				margin-left:auto;
+				margin-right:auto;
+				margin-top:100px;
+			}
+			
+			p{
+				background-color:#35B352;
+				color:#fff;
+				margin-top:50px;
+				padding:.5em .8em;
+				border-radius:2px;
+			}
+				
+		</style>
+	</head>
+	<body>
+		
+		<div class="demo" >
+			<p tooltip="left" tips="左边提示">左边提示</p>		
+			<p tooltip="right" tips="右边提示">右边提示</p>		
+			<p tooltip="top" tips="上边提示">上边提示</p>		
+			<p tooltip="bottom" tips="下边提示">下边提示</p>	
+		</div>	
+		
+	</body>
+</html>
