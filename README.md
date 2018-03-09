@@ -9,7 +9,7 @@ v. 1.0.1
 # tooltip
 纯CSS鼠标提示工具。
 
-预览[DEMO](https://jofunliang.github.io/tooltip.html)效果。
+预览[DEMO](https://jofunliang.github.io/tooltip/)效果。
 
 # 安装
 
