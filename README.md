@@ -1,10 +1,8 @@
 # tooltip.css
 
-v. 1.0.1
+v. 2.0.0
 
-更新日期：2018.1.10
-
-更新内容：修复因淡入动画时间过长导致的眩晕感
+更新日期：2018.4.12
 
 # tooltip
 纯CSS鼠标提示工具。
@@ -25,7 +23,7 @@ v. 1.0.1
 
 1、在需要显示提示的标签上添加**tooltip**属性和**tips**两个属性；
 
-2、**tooltip**属性值代表方向，可以设置为“left”、“right”、“top”和“bottom”中的任意一个值；
+2、**tooltip**属性值代表方向，可以设置为“left”、“right”、“top”、“bottom”、“top-left”、“top-right”、“bottom-left”和“bottom-right”中的任意一个值；
 
 3、**tips**属性存放的是显示所需的文本。
 
