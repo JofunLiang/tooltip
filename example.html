@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<title>css3鼠标提示</title>
+		<meta name="description" content="纯css鼠标提示工具。tooltip.css。" />
+		<meta name="keywords" content="tooltip,鼠标提示css,鼠标提示工具,纯css鼠标提示工具,tooltip.css使用示例" />
+		<link rel="stylesheet" href="tooltip.min.css" />
+		<style>
+			
+			body,h1,h2,strong,p{
+				margin:0;
+				padding:0;
+			}
+			
+			body{
+				text-align:center;
+				line-height:150%;
+				font-size:16px;
+				font-family: "微软雅黑";
+				background-color:#EFF3FD;
+			}
+			
+			h2{margin-top:25px;}
+			
+			strong{
+				font-family: arial;
+			}
+			
+			.header{
+				width:100%;
+				height:180px;
+				background-color:#66677C;
+				color:#D5D6E2;
+			}
+			
+			.row{
+				display:table;
+			}
+			
+			.col{
+				width:300px;
+				height:60px;
+				display:table-cell;
+				vertical-align: middle;
+				padding:20px;
+				box-sizing:border-box;
+			}
+			
+			.col p{
+				padding:15px 30px;
+				background-color:#fff;
+				border:1px solid darkblue;
+				color:darkblue;
+				font-size:21px;
+			}
+			
+			.col p:hover{
+				color:midnightblue;
+				border-color:midnightblue;
+			}
+			
+			.demo{
+				width:900px;
+				margin-left:auto;
+				margin-right:auto;
+				margin-top:100px;
+			}
+			
+			[data-tooltip]:before{
+				font-size:16px;
+			}
+				
+		</style>
+	</head>
+	<body>
+		
+		<div class="header row">
+			<div class="header-wrapper col">
+				<h1>Tooltip.css</h1>
+				<h2>纯 css3 Tooltip 提示工具样式</h2>
+				<strong>A simple and easy-to-use css3 tooltip.</strong>
+			</div>
+		</div>
+		
+		<div class="demo" >
+			<div class="row">
+				<div class="col">
+					<p data-tooltip="top-left" data-tooltip-text="左上方提示样式，css3提示样式">Top Left</p>
+				</div>
+				<div class="col">
+					<p data-tooltip="top" data-tooltip-text="上方提示样式">Top</p>	
+				</div>
+				<div class="col">
+					<p data-tooltip="top-right" data-tooltip-text="右上方提示样式，css3提示样式">Top Right</p>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col">
+					<p data-tooltip="left" data-tooltip-text="左边提示样式 &#010 这个是左边提示样式哦 &#010 css3提示样式">Left</p>
+				</div>
+				<div class="col" style="font-size:48px; font-weight: bold; color:darkblue;">Tooltip.css</div>
+				<div class="col">
+					<p data-tooltip="right" data-tooltip-text="右边提示样式 &#010 这个是右边提示样式哦 &#010 css3提示样式">Right</p>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col">
+					<p data-tooltip="bottom-left" data-tooltip-text="左下方提示样式，css3提示样式">Bottom Left</p>	
+				</div>
+				<div class="col">
+					<p data-tooltip="bottom" data-tooltip-text="下方提示样式">Bottom</p>
+				</div>
+				<div class="col">
+					<p data-tooltip="bottom-right" data-tooltip-text="右下方提示样式，css3提示样式">Bottom Right</p>
+				</div>
+			</div>
+		</div>	
+		
+	</body>
+</html>

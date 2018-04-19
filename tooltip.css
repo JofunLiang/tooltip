@@ -1,0 +1,264 @@
+/*!
+ * tooltip.css -https://github.com/JofunLiang/tooltip
+ * Version - 2.0.0
+ * Licensed under the MIT license - http://opensource.org/licenses/MIT
+ * Copyright (c) 2018 jofun Liang
+ */
+
+/*utils*/
+[data-tooltip] {
+    position: relative;
+    cursor: pointer; 
+}
+  
+[data-tooltip]:before, 
+[data-tooltip]:after {
+    position: absolute;
+    pointer-events: none;
+    will-change: transform;
+    transform: translate3d(0, 0, 0);
+    transition: all 0.3s ease-in;
+    z-index: 9;
+    opacity: 0; 
+}
+    
+[data-tooltip]:before {
+    font-size: .95em;
+    content: attr(data-tooltip-text);
+    background-color: #222;
+    padding: 0.3em 0.7em;
+    color: #fff;
+    white-space: pre;
+    border-radius: 2px;
+    line-height: 150%;
+    box-shadow: 0 0 8px #999; 
+}
+    
+[data-tooltip]:after {
+    display: block;
+    content: "";
+    width: 0;
+    height: 0;
+    border-width: 8px;
+    border-style: solid;
+    border-color: transparent; 
+}
+    
+[data-tooltip]:hover:before, 
+[data-tooltip]:hover:after {
+    opacity: 1; 
+}
+
+[data-tooltip=left]:before, 
+[data-tooltip=left]:after,
+[data-tooltip=right]:before,
+[data-tooltip=right]:after {
+  top: 50%;
+  transform: translate(0, -50%);
+  -webkit-transform: translate(0, -50%);
+  -moz-transform: translate(0, -50%);
+  -ms-transform: translate(0, -50%); 
+}
+
+[data-tooltip=top]:before, 
+[data-tooltip=top]:after,
+[data-tooltip=bottom]:before,
+[data-tooltip=bottom]:after {
+  left: 50%;
+  transform: translate(-50%, 0);
+  -webkit-transform: translate(-50%, 0);
+  -moz-transform: translate(-50%, 0);
+  -ms-transform: translate(-50%, 0); 
+}
+
+/*left*/
+[data-tooltip=left]:before {
+  right: 100%; 
+}
+
+[data-tooltip=left]:after {
+  left: -1px;
+  border-right-width: 0;
+  border-left-color: #222; 
+}
+
+[data-tooltip=left]:hover:before, 
+[data-tooltip=left]:hover:after {
+  transform: translate(-12px, -50%);
+  -webkit-transform: translate(-12px, -50%);
+  -moz-transform: translate(-12px, -50%);
+  -ms-transform: translate(-12px, -50%); 
+}
+
+/*right*/
+[data-tooltip=right]:before {
+  left: 100%; 
+}
+
+[data-tooltip=right]:after {
+  right: -1px;
+  border-left-width: 0;
+  border-right-color: #222; 
+}
+
+[data-tooltip=right]:hover:before, 
+[data-tooltip=right]:hover:after {
+  transform: translate(12px, -50%);
+  -webkit-transform: translate(12px, -50%);
+  -moz-transform: translate(12px, -50%);
+  -ms-transform: translate(12px, -50%); 
+}
+
+/*top*/
+[data-tooltip=top]:before {
+  bottom: 100%; 
+}
+
+[data-tooltip=top]:after {
+  top: -1px;
+  border-bottom-width: 0;
+  border-top-color: #222; 
+}
+
+[data-tooltip=top]:hover:before, 
+[data-tooltip=top]:hover:after {
+  transform: translate(-50%, -12px);
+  -webkit-transform: translate(-50%, -12px);
+  -moz-transform: translate(-50%, -12px);
+  -ms-transform: translate(-50%, -12px); 
+}
+
+/*bottom*/
+[data-tooltip=bottom]:before {
+  top: 100%; 
+}
+
+[data-tooltip=bottom]:after {
+  bottom: -1px;
+  border-top-width: 0;
+  border-bottom-color: #222; 
+}
+
+[data-tooltip=bottom]:hover:before, 
+[data-tooltip=bottom]:hover:after {
+  transform: translate(-50%, 12px);
+  -webkit-transform: translate(-50%, 12px);
+  -moz-transform: translate(-50%, 12px);
+  -ms-transform: translate(-50%, 12px); 
+}
+
+/*util2*/
+[data-tooltip=top-left]:after,
+[data-tooltip=top-right]:after,
+[data-tooltip=bottom-left]:after,
+[data-tooltip=bottom-right]:after {
+  left: 50%;
+  transform: translate(-50%, 0);
+  -webkit-transform: translate(-50%, 0);
+  -moz-transform: translate(-50%, 0);
+  -ms-transform: translate(-50%, 0); 
+}
+
+[data-tooltip=top-left]:before,
+[data-tooltip=top-right]:before {
+  bottom: 100%; 
+}
+
+[data-tooltip=top-left]:after,
+[data-tooltip=top-right]:after {
+  top: -1px;
+  border-bottom-width: 0;
+  border-top-color: #222; 
+}
+
+[data-tooltip=top-left]:hover:after,
+[data-tooltip=top-right]:hover:after {
+  transform: translate(-50%, -12px);
+  -webkit-transform: translate(-50%, -12px);
+  -moz-transform: translate(-50%, -12px);
+  -ms-transform: translate(-50%, -12px); 
+}
+
+[data-tooltip=bottom-left]:before,
+[data-tooltip=bottom-right]:before {
+  top: 100%; 
+}
+
+[data-tooltip=bottom-left]:after,
+[data-tooltip=bottom-right]:after {
+  bottom: -1px;
+  border-top-width: 0;
+  border-bottom-color: #222; 
+}
+
+[data-tooltip=bottom-left]:hover:after,
+[data-tooltip=bottom-right]:hover:after {
+  transform: translate(-50%, 12px);
+  -webkit-transform: translate(-50%, 12px);
+  -moz-transform: translate(-50%, 12px);
+  -ms-transform: translate(-50%, 12px); 
+}
+
+/*top-left*/
+[data-tooltip=top-left]:before {
+  right: 50%;
+  transform: translate(14px, 0);
+  -webkit-transform: translate(14px, 0);
+  -moz-transform: translate(14px, 0);
+  -ms-transform: translate(14px, 0); 
+}
+
+[data-tooltip=top-left]:hover:before {
+  transform: translate(14px, -12px);
+  -webkit-transform: translate(14px, -12px);
+  -moz-transform: translate(14px, -12px);
+  -ms-transform: translate(14px, -12px); 
+}
+
+/*top-right*/
+[data-tooltip=top-right]:before {
+  left: 50%;
+  transform: translate(-14px, 0);
+  -webkit-transform: translate(-14px, 0);
+  -moz-transform: translate(-14px, 0);
+  -ms-transform: translate(-14px, 0); 
+}
+
+[data-tooltip=top-right]:hover:before {
+  transform: translate(-14px, -12px);
+  -webkit-transform: translate(-14px, -12px);
+  -moz-transform: translate(-14px, -12px);
+  -ms-transform: translate(-14px, -12px); 
+}
+
+/*bottom-left*/
+[data-tooltip=bottom-left]:before {
+  right: 50%;
+  transform: translate(14px, 0);
+  -webkit-transform: translate(14px, 0);
+  -moz-transform: translate(14px, 0);
+  -ms-transform: translate(14px, 0); 
+}
+
+[data-tooltip=bottom-left]:hover:before {
+  transform: translate(14px, 12px);
+  -webkit-transform: translate(14px, 12px);
+  -moz-transform: translate(14px, 12px);
+  -ms-transform: translate(14px, 12px); 
+}
+
+/*bottom-right*/
+[data-tooltip=bottom-right]:before {
+  left: 50%;
+  transform: translate(-14px, 0);
+  -webkit-transform: translate(-14px, 0);
+  -moz-transform: translate(-14px, 0);
+  -ms-transform: translate(-14px, 0); 
+}
+
+[data-tooltip=bottom-right]:hover:before {
+  transform: translate(-14px, 12px);
+  -webkit-transform: translate(-14px, 12px);
+  -moz-transform: translate(-14px, 12px);
+  -ms-transform: translate(-14px, 12px); 
+}
