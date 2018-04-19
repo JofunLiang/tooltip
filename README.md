@@ -44,9 +44,13 @@ or(或）
 
 # 兼容性：
 1）IE9、IE9+
+
 2）Firefox
+
 3）Chrome
+
 4）360 Browser
+
 5）Sogou Explorer
 
 
