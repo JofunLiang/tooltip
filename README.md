@@ -8,12 +8,12 @@
 
 **npm 安装**
 ```
-npm install tooltip --save
+npm install tooltip-core --save
 ```
 
 **yarn 安装**
 ```
-yarn add tooltip
+yarn add tooltip-core
 ```
 
 **浏览器安装**

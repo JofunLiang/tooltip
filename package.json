@@ -1,5 +1,5 @@
 {
-  "name": "tooltip",
+  "name": "tooltip-core",
   "title": "Tooltip",
   "description": "A tooltip library made in pure CSS.",
   "version": "2.1.0",
