@@ -1,0 +1,49 @@
+// core.scss
+[data-tooltip=left]::before, 
+[data-tooltip=right]::before {
+  @include tooltip-vertical-center;
+}
+
+[data-tooltip=top]::before, 
+[data-tooltip=bottom]::before {
+  @include tooltip-horizontal-center;
+}
+
+@each $position in left, right, top, bottom {
+  @if $position == top or $position == bottom {
+    [data-tooltip=#{$position}]::before,
+    [data-tooltip=#{$position}-left]::before,
+    [data-tooltip=#{$position}-right]::before {
+      @include tooltip-position($position, 100%);
+    }
+  }
+
+  @else {
+    [data-tooltip=#{$position}]::before {
+      @include tooltip-position($position, 100%);
+    }
+  }
+}
+
+@each $xDir, $x in (left, $--tooltip-distance), (right, -$--tooltip-distance) {
+  @each $yDir in top, bottom {
+    [data-tooltip=#{$yDir}-#{$xDir}]::before {
+      @include tooltip-position($xDir, 50%);
+      transform: translate($x, 0);
+    }
+  }
+}
+
+// hover
+@each $direction, $x, $y in (left, -$--tooltip-distance, -50%),
+                            (right, $--tooltip-distance, -50%),
+                            (top, -50%, -$--tooltip-distance),
+                            (top-left, $--tooltip-distance, -$--tooltip-distance),
+                            (top-right, -$--tooltip-distance, -$--tooltip-distance),
+                            (bottom, -50%, $--tooltip-distance),
+                            (bottom-left, $--tooltip-distance, $--tooltip-distance),
+                            (bottom-right, -$--tooltip-distance, $--tooltip-distance) {
+                              [data-tooltip=#{$direction}]:hover::before {
+                                transform: translate($x, $y);
+                              }
+                            }

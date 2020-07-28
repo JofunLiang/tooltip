@@ -1,0 +1,38 @@
+// mixins.scss
+// Place to store common mixins.
+
+// horizontal center
+@mixin tooltip-horizontal-center {
+  left: 50%;
+  transform: translate(-50%, 0);
+}
+
+// vertical center
+@mixin tooltip-vertical-center {
+  top: 50%;
+  transform: translate(0, -50%);
+}
+
+// allow color
+@mixin tooltip-allow-color($position, $color: $--tooltip-bg-color) {
+  border-#{$position}-color: $color; 
+}
+
+// position
+@mixin tooltip-position ($position, $val) {
+  @if $position == left {
+    right: $val
+  }
+
+  @if $position == right {
+    left: $val
+  }
+
+  @if $position == top {
+    bottom: $val
+  }
+
+  @if $position == bottom {
+    top: $val
+  }
+}

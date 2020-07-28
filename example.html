@@ -5,7 +5,7 @@
 		<title>css3鼠标提示</title>
 		<meta name="description" content="纯css鼠标提示工具。tooltip.css。" />
 		<meta name="keywords" content="tooltip,鼠标提示css,鼠标提示工具,纯css鼠标提示工具,tooltip.css使用示例" />
-		<link rel="stylesheet" href="tooltip.min.css" />
+		<link rel="stylesheet" href="./dist/tooltip.min.css" />
 		<style>
 			
 			body,h1,h2,strong,p{
@@ -32,6 +32,29 @@
 				height:180px;
 				background-color:#66677C;
 				color:#D5D6E2;
+			}
+
+			.header a {
+				display: block;
+				width: 120px;
+				height: 35px;
+				line-height: 35px;
+				background-color: #E36209;
+				color: #fff;
+				font-weight: bold;
+				margin: 10px auto;
+				text-decoration: none;
+				border-radius: 4px;
+				border: 2px solid #E34C26;
+				opacity: 0.85;
+				transition: all 0.3s ease-in;
+			}
+
+			.header a:hover {
+				background-color: #E34C26;
+				border-color: #CF5033;
+				text-shadow: 0 2px 3px #333;
+				box-shadow: 0 3px 0 #333;
 			}
 			
 			.row{
@@ -66,10 +89,6 @@
 				margin-right:auto;
 				margin-top:100px;
 			}
-			
-			[data-tooltip]:before{
-				font-size:16px;
-			}
 				
 		</style>
 	</head>
@@ -80,6 +99,7 @@
 				<h1>Tooltip.css</h1>
 				<h2>纯 css3 Tooltip 提示工具样式</h2>
 				<strong>A simple and easy-to-use css3 tooltip.</strong>
+				<a href="https://github.com/JofunLiang/tooltip">Github</a>
 			</div>
 		</div>
 		

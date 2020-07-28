@@ -1,0 +1,42 @@
+// base.scss
+[data-tooltip] {
+    position: relative;
+
+    &::before,
+    &::after {
+        position: absolute;
+        pointer-events: none;
+        will-change: transform;
+        transform: translate3d(0, 0, 0);
+        transition: all $--tooltip-transition-duration $--tooltip-transition-timing-function $--tooltip-transition-delay;
+        z-index: $--tooltip-z-index;
+        visibility: hidden;
+        opacity: 0;
+    }
+
+    &::before {
+        font-size: $--tooltip-font-size;
+        content: attr(data-tooltip-text);
+        background-color: $--tooltip-bg-color;
+        padding: $--tooltip-vertical-padding $--tooltip-horizontal-padding;
+        color: $--tooltip-font-color;
+        white-space: pre;
+        border-radius: $--tooltip-border-radius;
+        line-height: $--tooltip-line-height;
+        box-shadow: 0 0 8px #999;
+    }
+
+    &::after {
+        display: block;
+        content: "";
+        width: 0;
+        height: 0;
+        border: 8px solid transparent;
+    }
+
+    &:hover::before,
+    &:hover::after {
+        visibility: visible;
+        opacity: 1;
+    }
+}
