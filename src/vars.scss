@@ -1,0 +1,32 @@
+// vars.scss
+// Declares some variables used within the library.
+
+// font size
+$--tooltip-font-size: 14px !default;
+
+// font color
+$--tooltip-font-color: #fff !default;
+
+// line height
+$--tooltip-line-height: 1.5 !default;
+
+// background color
+$--tooltip-bg-color: #222 !default;
+
+// z-index for tooltips
+$--tooltip-z-index: 999999 !default;
+
+// border radius
+$--tooltip-border-radius: 2px !default;
+
+// paddings
+$--tooltip-vertical-padding: .4em !default;
+$--tooltip-horizontal-padding: .8em !default;
+
+// transition options
+$--tooltip-transition-duration: .3s !default;
+$--tooltip-transition-timing-function: ease-in !default;
+$--tooltip-transition-delay: 0s !default;
+
+// The distance of tooltips
+$--tooltip-distance: 12px;

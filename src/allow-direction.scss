@@ -1,0 +1,46 @@
+// allow-direction
+[data-tooltip=left]::after,
+[data-tooltip=right]::after {
+  @include tooltip-vertical-center;
+}
+
+[data-tooltip=top]::after,
+[data-tooltip=top-left]::after,
+[data-tooltip=top-right]::after,
+[data-tooltip=bottom]::after,
+[data-tooltip=bottom-left]::after,
+[data-tooltip=bottom-right]::after {
+  @include tooltip-horizontal-center;
+}
+
+// direction and color
+@each $position, $x, $y in (left, -$--tooltip-distance, -50%),
+                           (right, $--tooltip-distance, -50%),
+                           (top, -50%, -$--tooltip-distance),
+                           (bottom, -50%, $--tooltip-distance) {
+  @if $position == top or $position == bottom {
+    [data-tooltip=#{$position}]::after,
+    [data-tooltip=#{$position}-left]::after,
+    [data-tooltip=#{$position}-right]::after {
+      #{$position}: -1px;
+      @include tooltip-allow-color($position)
+    }
+
+    [data-tooltip=#{$position}]:hover::after,
+    [data-tooltip=#{$position}-left]:hover::after,
+    [data-tooltip=#{$position}-right]:hover::after {
+      transform: translate($x, $y);
+    }
+  }
+
+  @else {
+    [data-tooltip=#{$position}]::after {
+      #{$position}: -1px;
+      @include tooltip-allow-color($position);
+    }
+
+    [data-tooltip=#{$position}]:hover::after {
+      transform: translate($x, $y);
+    }
+  }
+}

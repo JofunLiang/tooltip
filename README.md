@@ -1,19 +1,24 @@
-# tooltip.css
-
-v. 2.0.0
-
-更新日期：2018.4.12
-
 # tooltip
-纯CSS鼠标提示工具。
+
+纯 CSS 鼠标提示工具。
 
 预览[DEMO](https://jofunliang.github.io/tooltip/)效果。
 
 # 安装
 
-只需在页面中引入"tooltip.css"或“tooltip.min.css”文件即可。
+**npm 安装**
+```
+npm install tooltip --save
+```
 
-如：
+**yarn 安装**
+```
+yarn add tooltip
+```
+
+**浏览器安装**
+
+只需在页面中引入 dist 文件夹下的"tooltip.css"或“tooltip.min.css”文件即可。如：
 
 ```
 <link rel="stylesheet" href="css/tooltip.css" />
